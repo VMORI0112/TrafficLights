@@ -1,0 +1,73 @@
+.mainlight {
+    text-align: center;
+    border : 2px;
+    background-color : red ;
+    width : 200px;
+    height : 600px;
+    }
+.lightredon {
+    text-align: inline ;
+    border-radius: 100px ;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+ }
+ .lightredoff {
+     border-radius: 100px;
+     background-color: red;
+     opacity: 10%;
+     width: 100px;
+     height: 100px;
+ }
+ .lightyellownon {
+    border-radius: 100px ;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+ }
+ .lightyellowoff {
+     border-radius: 100px;
+     background-color: yellow;
+     opacity: 10%;
+     width: 100px;
+     height: 100px;
+ }
+ .lightgreenon {
+    border-radius: 100px ;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+ }
+ .lightgreenoff {
+     border-radius: 100px;
+     background-color: green;
+     opacity: 10%;
+     width: 100px;
+     height: 100px;
+ }
+  .maninwalk {
+     margin-top: 8px;
+     background-color: black;
+     width: 100px;
+     height: 100px;
+ }
+ .walkon {
+     background-color: green;
+     color: black;
+ }
+ .walkoff {
+     background-color: black;
+     color: black;
+ }
+ .nowalkon {
+     background-color: red;
+     color: black;
+ }
+ .nowalkoff {
+     background-color: black;
+     color: black;
+ }
+ .automatic {
+     background-color: green;
+     color: black;
+ }
