@@ -4,16 +4,33 @@ import './lights.css';
 
 function controlTraff() {
 
+    function onRed() {
+             document.getElementById("redone").style.opacity = "1";
+             document.getElementById("yellowone").style.opacity = ".3";
+             document.getElementById("greenone").style.opacity = ".3";
+            }
+    function onYellow() {
+            document.getElementById("redone").style.opacity = ".3";
+            document.getElementById("yellowone").style.opacity = "1";
+            document.getElementById("greenone").style.opacity = ".3";
+            }
+    function onGreen() {
+            document.getElementById("redone").style.opacity = ".3";
+            document.getElementById("yellowone").style.opacity = ".3";
+            document.getElementById("greenone").style.opacity = "1";
+            }
+
 	return (
        <>
-		<div className="mainlights">
-			<div className="lightred"><button>red</button></div>
-            <div className="lightyellow"><button>yellow</button></div>
-            <div className="lightgreen"><button>green</button></div>
+		<div className="mainlight mx-auto">
+			<div className="lightred mx-auto" onClick={onRed} id="redone"></div>
+            <div className="lightyellow mx-auto" onClick={onYellow} id="yellowone"></div>
+            <div className="lightgreen mx-auto" onClick={onGreen} id="greenone"></div>
+
 		</div>
-        <div className="mainwalk">
-			<div className="walk"></div>
-            <div className="nowalk"></div>
+        <div className="mainwalk mx-auto">
+			<div className="walk text-center" >WALK</div>
+            <div className="nowalk text-center">NOT WALK</div>
 		</div>
         <div className="buttonlights">
 			<div className="lightson"><button>Lights On </button></div>

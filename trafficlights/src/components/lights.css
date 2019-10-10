@@ -1,70 +1,46 @@
 .mainlight {
     text-align: center;
     border : 2px;
-    background-color : red ;
+    background-color : black ;
     width : 200px;
     height : 600px;
     }
-.lightredon {
+.lightred {
+    margin-top: 10px;
     text-align: inline ;
     border-radius: 100px ;
     background-color: red;
     width: 100px;
     height: 100px;
  }
- .lightredoff {
-     border-radius: 100px;
-     background-color: red;
-     opacity: 10%;
-     width: 100px;
-     height: 100px;
- }
- .lightyellownon {
+
+ .lightyellow {
     border-radius: 100px ;
     background-color: yellow;
     width: 100px;
     height: 100px;
  }
- .lightyellowoff {
-     border-radius: 100px;
-     background-color: yellow;
-     opacity: 10%;
-     width: 100px;
-     height: 100px;
- }
- .lightgreenon {
+
+ .lightgreen {
     border-radius: 100px ;
     background-color: green;
     width: 100px;
     height: 100px;
  }
- .lightgreenoff {
-     border-radius: 100px;
-     background-color: green;
-     opacity: 10%;
-     width: 100px;
-     height: 100px;
- }
-  .maninwalk {
+
+  .mainwalk {
      margin-top: 8px;
      background-color: black;
      width: 100px;
      height: 100px;
+     color: white
  }
- .walkon {
+ .walk {
      background-color: green;
      color: black;
  }
- .walkoff {
-     background-color: black;
-     color: black;
- }
- .nowalkon {
+ .nowalk {
      background-color: red;
-     color: black;
- }
- .nowalkoff {
-     background-color: black;
      color: black;
  }
  .automatic {
