@@ -1,31 +1,32 @@
 .mainlight {
-    text-align: center;
+    padding: 10px;
     border : 2px;
     background-color : black ;
     width : 200px;
     height : 600px;
     }
 .lightred {
-    margin-top: 10px;
-    text-align: inline ;
+   margin-top: 10px;
     border-radius: 100px ;
     background-color: red;
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
  }
 
  .lightyellow {
+    margin-top: 10px;
     border-radius: 100px ;
     background-color: yellow;
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
  }
 
  .lightgreen {
+    margin-top: 10px;
     border-radius: 100px ;
     background-color: green;
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
  }
 
   .mainwalk {
