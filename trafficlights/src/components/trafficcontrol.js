@@ -2,22 +2,28 @@ import React from "react";
 import './lights.css';
 
 
-function controlTraff() {
+const controlTraff = () => {
 
-    function onRed() {
+    const onRed = () => {
              document.getElementById("redone").style.opacity = "1";
              document.getElementById("yellowone").style.opacity = ".3";
              document.getElementById("greenone").style.opacity = ".3";
+             document.getElementById("walk").style.opacity = "1";
+             document.getElementById("stop").style.opacity = ".3";
             }
-    function onYellow() {
+    const onYellow = () => {
             document.getElementById("redone").style.opacity = ".3";
             document.getElementById("yellowone").style.opacity = "1";
             document.getElementById("greenone").style.opacity = ".3";
+            document.getElementById("walk").style.opacity = ".3";
+            document.getElementById("stop").style.opacity = "1";
             }
-    function onGreen() {
+    const onGreen = () => {
             document.getElementById("redone").style.opacity = ".3";
             document.getElementById("yellowone").style.opacity = ".3";
             document.getElementById("greenone").style.opacity = "1";
+            document.getElementById("walk").style.opacity = ".3";
+            document.getElementById("stop").style.opacity = "1";
             }
 
 	return (
@@ -29,8 +35,8 @@ function controlTraff() {
 
 		</div>
         <div className="mainwalk mx-auto">
-			<div className="walk text-center" >WALK</div>
-            <div className="nowalk text-center">NOT WALK</div>
+			<div className="walk text-center" id="walk">WALK</div>
+            <div className="nowalk text-center" id="stop">STOP</div>
 		</div>
         <div className="buttonlights">
 			<div className="lightson"><button>Lights On </button></div>
