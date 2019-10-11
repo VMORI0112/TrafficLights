@@ -32,16 +32,15 @@ const ControlTraff = () => {
 
     useEffect(() => {
 
-        setTimeout(() => setTime(time + 1), 1000);
-
         if (flag === 1) {
+            setTimeout(() => setTime(time + 1), 1000);
             if (time === 2)  onRed();
-            if (time === 4)  onYellow();
-            if (time === 6)  onGreen();
-            if (time === 7)  setTime(0);
+            if (time === 7)  onYellow();
+            if (time === 8)  onGreen();
+            if (time === 9)  setTime(0);
         }
 
-    }, [time])
+    }, [time, flag])
 
 
 
@@ -61,7 +60,7 @@ const ControlTraff = () => {
         <div className="buttonlights">
 			<div className="lightson" ><button>Lights On </button></div>
             <div className="lightsoff"><button>Lights Off </button></div>
-            <div className="automatic" onClick={setFlag(1)}><button>Automatic </button></div>
+            <div className="automatic" onClick={() => setFlag(1)}><button>Automatic </button></div>
 		</div>
       </>
 	);
