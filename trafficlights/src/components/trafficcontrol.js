@@ -9,9 +9,12 @@ const ControlTraff = () => {
         const [btnoff, setBtnoff] = useState(true);
         const [btnon, setBtnon] = useState(true);
         const [time, setTime] = useState(0);
-        console.log("flag" + flag, "lights" + lightsoff)
-      //if (flaglights === 1 || flag ===0) {
-          //  setFlag(0);
+       // console.log("flag" + flag, "lights" + lightsoff)
+
+            const btnonn = () => {
+                setLightsoff(0);
+                setFlag(1) ;
+            }
             const noLights = () => {
                 document.getElementById("redone").style.opacity = ".3";
                 document.getElementById("yellowone").style.opacity = ".3";
@@ -40,11 +43,10 @@ const ControlTraff = () => {
                 document.getElementById("walk").style.opacity = ".3";
                 document.getElementById("stop").style.opacity = "1";
             }
-       // }
 
     useEffect(() => {
 
-        if (flag === 1 && lightsoff ===0)  {
+        if (flag === 1 && lightsoff === 0)  {
             setLightsoff(0);
             setTimeout(() => setTime(time + 1), 1000);
             if (time === 2)  onYellow();
@@ -72,8 +74,8 @@ const ControlTraff = () => {
             <div className="nowalk text-center" id="stop">STOP</div>
 		</div>
         <div className="boxbuttons mx-auto">
-			<div className="onbutton" ><button> ON </button></div>
-            <div className="offbutton" onClick={() => setLightsoff(1) }><button> OFF </button></div>
+			<div className="onbutton" onClick={btnonn} ><button> ON </button></div>
+            <div className="offbutton" onClick={() => setLightsoff(1)}><button> OFF </button></div>
             <div className="autobutton" onClick={() => setFlag(1)}><button> AUTO </button></div>
 		</div>
       </>
