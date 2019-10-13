@@ -36,17 +36,32 @@
      height: 50px;
      color: white
  }
- .walk {
+
+.walk {
      background-color: green;
      color: black;
      height: 50px;
  }
- .nowalk {
+  .nowalk {
      background-color: red;
      color: black;
      height: 50px;
  }
- .automatic {
-     background-color: green;
+ /* .boxbuttons {
+     background-color: white;
      color: black;
+     border: solid 2px;
+ } */
+ /* .greenbutton {
+     background-color: gray;
+     color: black;
+ }
+ .redbutton {
+     background-color:gray;
+     color: black;
+ } */
+ .autobutton {
+     background-color: gray;
+     color: black;
+     height: 50px;
  }

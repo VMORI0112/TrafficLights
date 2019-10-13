@@ -4,7 +4,6 @@ import './lights.css';
 
 const ControlTraff = () => {
 
-   // const [time, setTime] = useState(0);
     const [flag, setFlag] = useState(0);
     const [time, setTime] = useState(0);
 
@@ -34,15 +33,13 @@ const ControlTraff = () => {
 
         if (flag === 1) {
             setTimeout(() => setTime(time + 1), 1000);
-            if (time === 2)  onRed();
-            if (time === 7)  onYellow();
-            if (time === 8)  onGreen();
-            if (time === 9)  setTime(0);
+            if (time === 2)  onYellow();
+            if (time === 4)  onRed();
+            if (time === 11)  onGreen();
+            if (time === 17)  setTime(0);
         }
 
     }, [time, flag])
-
-
 
 
 	return (
@@ -57,10 +54,10 @@ const ControlTraff = () => {
 			<div className="walk text-center" id="walk">WALK</div>
             <div className="nowalk text-center" id="stop">STOP</div>
 		</div>
-        <div className="buttonlights">
-			<div className="lightson" ><button>Lights On </button></div>
-            <div className="lightsoff"><button>Lights Off </button></div>
-            <div className="automatic" onClick={() => setFlag(1)}><button>Automatic </button></div>
+        <div className="boxbuttons mx-auto">
+			<div className="greenbutton" ><button> ON </button></div>
+            <div className="redbutton"><button> OFF </button></div>
+            <div className="autobutton" onClick={() => setFlag(1)}><button> AUTO </button></div>
 		</div>
       </>
 	);
