@@ -4,42 +4,59 @@ import './lights.css';
 
 const ControlTraff = () => {
 
-    const [flag, setFlag] = useState(0);
-    const [time, setTime] = useState(0);
-
-    const onRed = () => {
-        document.getElementById("redone").style.opacity = "1";
-        document.getElementById("yellowone").style.opacity = ".3";
-        document.getElementById("greenone").style.opacity = ".3";
-        document.getElementById("walk").style.opacity = "1";
-        document.getElementById("stop").style.opacity = ".3";
-    }
-    const onYellow = () => {
-        document.getElementById("redone").style.opacity = ".3";
-        document.getElementById("yellowone").style.opacity = "1";
-        document.getElementById("greenone").style.opacity = ".3";
-        document.getElementById("walk").style.opacity = ".3";
-        document.getElementById("stop").style.opacity = "1";
-    }
-    const onGreen = () => {
-        document.getElementById("redone").style.opacity = ".3";
-        document.getElementById("yellowone").style.opacity = ".3";
-        document.getElementById("greenone").style.opacity = "1";
-        document.getElementById("walk").style.opacity = ".3";
-        document.getElementById("stop").style.opacity = "1";
-    }
+        const [flag, setFlag] = useState(0);
+        const [lightsoff, setLightsoff] = useState(0);
+        const [btnoff, setBtnoff] = useState(true);
+        const [btnon, setBtnon] = useState(true);
+        const [time, setTime] = useState(0);
+        console.log("flag" + flag, "lights" + lightsoff)
+      //if (flaglights === 1 || flag ===0) {
+          //  setFlag(0);
+            const noLights = () => {
+                document.getElementById("redone").style.opacity = ".3";
+                document.getElementById("yellowone").style.opacity = ".3";
+                document.getElementById("greenone").style.opacity = ".3";
+                document.getElementById("walk").style.opacity = ".3";
+                document.getElementById("stop").style.opacity = ".3";
+            }
+            const onRed = () => {
+                document.getElementById("redone").style.opacity = "1";
+                document.getElementById("yellowone").style.opacity = ".3";
+                document.getElementById("greenone").style.opacity = ".3";
+                document.getElementById("walk").style.opacity = "1";
+                document.getElementById("stop").style.opacity = ".3";
+            }
+            const onYellow = () => {
+                document.getElementById("redone").style.opacity = ".3";
+                document.getElementById("yellowone").style.opacity = "1";
+                document.getElementById("greenone").style.opacity = ".3";
+                document.getElementById("walk").style.opacity = ".3";
+                document.getElementById("stop").style.opacity = "1";
+            }
+            const onGreen = () => {
+                document.getElementById("redone").style.opacity = ".3";
+                document.getElementById("yellowone").style.opacity = ".3";
+                document.getElementById("greenone").style.opacity = "1";
+                document.getElementById("walk").style.opacity = ".3";
+                document.getElementById("stop").style.opacity = "1";
+            }
+       // }
 
     useEffect(() => {
 
-        if (flag === 1) {
+        if (flag === 1 && lightsoff ===0)  {
+            setLightsoff(0);
             setTimeout(() => setTime(time + 1), 1000);
             if (time === 2)  onYellow();
             if (time === 4)  onRed();
-            if (time === 11)  onGreen();
-            if (time === 17)  setTime(0);
+            if (time === 10)  onGreen();
+            if (time === 16)  setTime(0);
+        }
+         if (lightsoff === 1) {
+             noLights();
         }
 
-    }, [time, flag])
+    }, [time, flag, lightsoff])
 
 
 	return (
@@ -55,8 +72,8 @@ const ControlTraff = () => {
             <div className="nowalk text-center" id="stop">STOP</div>
 		</div>
         <div className="boxbuttons mx-auto">
-			<div className="greenbutton" ><button> ON </button></div>
-            <div className="redbutton"><button> OFF </button></div>
+			<div className="onbutton" ><button> ON </button></div>
+            <div className="offbutton" onClick={() => setLightsoff(1) }><button> OFF </button></div>
             <div className="autobutton" onClick={() => setFlag(1)}><button> AUTO </button></div>
 		</div>
       </>
